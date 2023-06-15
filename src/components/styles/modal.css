@@ -1,0 +1,141 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 500px;
+    color: #151515;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 10;
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    transform: translate(-50%, -50%);
+    padding: .8rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: #e0e0e0;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+}
+
+.wrapper .header {
+    max-width: 400px;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.wrapper .content form {
+    max-width: 400px;
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wrapper .content form .formField {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .content form .formField label {
+    font-size: 1rem;
+}
+
+.wrapper .content form .formField input {
+    padding: .5rem;
+    border: none;
+    border-bottom: 1px solid #151515;
+    outline: none;
+    font-family: 'Kanit';
+}
+
+.wrapper .content form .formField button {
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #151515;
+    color: white;
+    font-family: 'Kanit';
+    cursor: pointer;
+    width: 200px;
+}
+
+.wrapper .content form .formField button:hover {
+    background-color: #0f0f0f;
+}
+
+.wrapper .content form .msg {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.wrapper .content form .msg .success {
+    padding: .8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 5px;
+    color: 	#099127;
+    background-color: #0f0f0f;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    position: absolute;
+}
+
+.wrapper .content form .msg .success i {
+    font-size: 1.5rem;
+}
+
+.wrapper .content form .msg .error {
+    padding: .8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 5px;
+    color: #ff0000;
+    background-color: #0f0f0f;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    position: absolute;
+}
+
+.wrapper .content form .msg .error i {
+    font-size: 1.5rem;
+}

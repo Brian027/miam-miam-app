@@ -1,0 +1,19 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.viewPlus button {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    color: #262626;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    padding: 5px 9px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}

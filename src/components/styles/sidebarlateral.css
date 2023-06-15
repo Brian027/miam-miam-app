@@ -1,0 +1,92 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    width: 250px;
+    height: auto;
+    transform: translate(100%, -50%);
+    background: #fafafa;
+    transition: transform 0.5s ease;
+    color: #151515;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sidebar.active {
+    transform: translate(0, -50%);
+}
+
+.sidebar.active .toggleSideBar i {
+    transform: rotate(180deg);
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.sidebar .toggleSideBar {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-header h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.sidebar .sidebar-body .sidebar-body-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.sidebar .sidebar-body .sidebar-body-item h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sidebar .sidebar-body .sidebar-body-item .checkboxList .checkboxItem {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.sidebar .sidebar-body .sidebar-body-item .checkboxList .checkboxItem .formField {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.sidebar .sidebar-body .sidebar-body-item .checkboxList .checkboxItem .formField label {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.sidebar .sidebar-body .sidebar-body-item .checkboxList .checkboxItem .formField input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    border: 1px solid #151515;
+}
+
+.sidebar .sidebar-body .sidebar-body-item .checkboxList .checkboxItem .formField input[type="checkbox"]:checked {
+    background-color: #0c0c0c;
+}

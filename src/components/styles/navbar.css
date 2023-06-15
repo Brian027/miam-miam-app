@@ -1,0 +1,71 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav {
+    max-width: 1300px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fafafa;
+}
+
+nav .logo h4 a img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .8rem;
+}
+
+nav .nav-links li a {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fafafa;
+}
+
+nav .nav-links li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fafafa;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav .nav-links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav button.signIn {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #151515;
+    background-color: #fafafa;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    font-family: 'Kanit', sans-serif;
+}
+
+nav button.signIn:hover {
+    background-color: #e0e0e0;
+}
